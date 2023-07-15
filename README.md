@@ -22,3 +22,6 @@ java -classpath ".:./ejml-0.23.jar:./stanford-corenlp-3.9.2.jar:./stanford-engli
 for Mac/linux, or
 java -classpath ".\stanford-corenlp-3.9.2.jar;.;./ejml-0.23.jar;./stanford-english-corenlp-2018-10-05-models.jar" Driver 
 for Windows.
+
+If you would like to look more into this assignment or try to do it yourself, it is from Professor Kinga Dobolyi at GWU.
+https://www2.seas.gwu.edu/~kinga/CS1111_F22/NLP_project.html
