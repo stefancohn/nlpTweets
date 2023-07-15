@@ -22,10 +22,10 @@ public class Driver {
                         }
                        
                         //this code is to get rid of the extra stuff in the timestamp
-                        // String[] arr = lines[2].split(" ");  
-                        // for (int i = 2; i <arr.length; i = i + 7){
-                           //     lines[i] = (arr[1] + " " + arr[2] + " " + arr[5]);
-                        // }
+                         String[] arr = lines[2].split(" ");  
+                         for (int i = 2; i <arr.length; i = i + 7){
+                                lines[i] = (arr[1] + " " + arr[2] + " " + arr[5]);
+                         }
                         
                         //creates a Sentence object that is then added to our arrayList
                         Sentence splitSentence = new Sentence(lines[5], lines[4], lines[2]);
@@ -34,15 +34,15 @@ public class Driver {
                 sc.close();
 
                 //convertLine checker
-                //String line = "\"4\",\"3\",\"Mon May 11 03:17:40 UTC 2009\",\"kindle2\",\"tpryan\",\"@stellargirl I " +
-		//	"loooooooovvvvvveee my Kindle2. Not that, the DX is, cool, but the 2 is fantast,ic in its own right.\"";
-                //Sentence convertLineTest = Sentence.convertLine(line);
-                //dataSplit.add(convertLineTest);
+                String line = "\"4\",\"3\",\"Mon May 11 03:17:40 UTC 2009\",\"kindle2\",\"tpryan\",\"@stellargirl I " +
+			"loooooooovvvvvveee my Kindle2. Not that, the DX is, cool, but the 2 is fantast,ic in its own right.\"";
+                Sentence convertLineTest = Sentence.convertLine(line);
+                dataSplit.add(convertLineTest);
 
                 HashMap<String, Integer> occuranceOfWords = printTopWords(dataSplit);
 
                 // hashmap checker 
-                /* Map.Entry<String, Integer> maxEntry = null;
+                 Map.Entry<String, Integer> maxEntry = null;
                 for (Map.Entry<String, Integer> entry : occuranceOfWords.entrySet())
                         if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
                         maxEntry = entry;
@@ -57,7 +57,7 @@ public class Driver {
                         Collections.sort(results);
                         Collections.reverse(results);
                         for (int i = 0; i < results.size() && i < 100; i++)
-                                System.out.println(results.get(i)); */
+                                System.out.println(results.get(i)); 
                 
                 // creates an arraylist that is properly filtered, passes it through getSentiment() to get scores
                 ArrayList<Sentence> filteredDataSplit = new ArrayList<Sentence>();
